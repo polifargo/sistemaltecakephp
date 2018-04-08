@@ -25,10 +25,14 @@
         <?= $this->Form->create($cliente, array('role' => 'form')) ?>
           <div class="box-body">
           <?php
-            echo $this->Form->input('nome_cliente');
+            echo $this->Form->input('nome');
             echo $this->Form->input('carros_id', ['options' => $carros]);
-            echo $this->Form->input('CPF_cliente');
-            echo $this->Form->input('telefone_cliente');
+            echo $this->Form->input('CPF');
+            echo $this->Form->input('contato');
+            echo $this->Form->input('cep');
+            echo $this->Form->input('rua');
+            echo $this->Form->input('numero');
+            echo $this->Form->input('complemento');
           ?>
           </div>
           <!-- /.box-body -->

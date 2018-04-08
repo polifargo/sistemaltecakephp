@@ -7,10 +7,14 @@ use Cake\ORM\Entity;
  * Cliente Entity
  *
  * @property int $id
- * @property string $nome_cliente
+ * @property string $nome
  * @property int $carros_id
- * @property string $CPF_cliente
- * @property string $telefone_cliente
+ * @property string $CPF
+ * @property string $contato
+ * @property string $cep
+ * @property string $rua
+ * @property string $numero
+ * @property string $complemento
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
@@ -29,10 +33,14 @@ class Cliente extends Entity
      * @var array
      */
     protected $_accessible = [
-        'nome_cliente' => true,
+        'nome' => true,
         'carros_id' => true,
-        'CPF_cliente' => true,
-        'telefone_cliente' => true,
+        'CPF' => true,
+        'contato' => true,
+        'cep' => true,
+        'rua' => true,
+        'numero' => true,
+        'complemento' => true,
         'created' => true,
         'modified' => true,
         'carro' => true

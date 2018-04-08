@@ -1,11 +1,11 @@
 <section class="content-header">
   <h1>
-    Usuario
+    User
     <small><?= __('Edit') ?></small>
   </h1>
   <ol class="breadcrumb">
     <li>
-      <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Back'), ['action' => 'index'], ['escape' => false]) ?>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Back'), ['action' => 'index'], ['escape' => false]) ?>
     </li>
   </ol>
 </section>
@@ -22,20 +22,20 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <?= $this->Form->create($usuario, array('role' => 'form')) ?>
-        <div class="box-body">
+        <?= $this->Form->create($user, array('role' => 'form')) ?>
+          <div class="box-body">
           <?php
-          echo $this->Form->input('usuario');
-          echo $this->Form->input('password');
-          echo $this->Form->input('role');
+            echo $this->Form->input('username');
+            echo $this->Form->input('password');
           ?>
-        </div>
-        <!-- /.box-body -->
-        <div class="box-footer">
-          <?= $this->Form->button(__('Save')) ?>
-        </div>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer">
+            <?= $this->Form->button(__('Save')) ?>
+          </div>
         <?= $this->Form->end() ?>
       </div>
     </div>
   </div>
 </section>
+

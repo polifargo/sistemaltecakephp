@@ -30,8 +30,12 @@
             <thead>
               <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('nome_carro') ?></th>
+                <th><?= $this->Paginator->sort('nome') ?></th>
                 <th><?= $this->Paginator->sort('categorias_carro_id') ?></th>
+                <th><?= $this->Paginator->sort('transmissao') ?></th>
+                <th><?= $this->Paginator->sort('cor') ?></th>
+                <th><?= $this->Paginator->sort('combustivel') ?></th>
+                <th><?= $this->Paginator->sort('qtd_portas') ?></th>
                 <th><?= __('Actions') ?></th>
               </tr>
             </thead>
@@ -39,8 +43,12 @@
             <?php foreach ($carros as $carro): ?>
               <tr>
                 <td><?= $this->Number->format($carro->id) ?></td>
-                <td><?= h($carro->nome_carro) ?></td>
-                <td><?= $carro->has('categorias_carro') ? $this->Html->link($carro->categorias_carro->nome_categoria, ['controller' => 'CategoriasCarros', 'action' => 'view', $carro->categorias_carro->id]) : '' ?></td>
+                <td><?= h($carro->nome) ?></td>
+                <td><?= $carro->has('categorias_carro') ? $this->Html->link($carro->categorias_carro->id, ['controller' => 'CategoriasCarros', 'action' => 'view', $carro->categorias_carro->id]) : '' ?></td>
+                <td><?= h($carro->transmissao) ?></td>
+                <td><?= h($carro->cor) ?></td>
+                <td><?= h($carro->combustivel) ?></td>
+                <td><?= $this->Number->format($carro->qtd_portas) ?></td>
                 <td class="actions" style="white-space:nowrap">
                   <?= $this->Html->link(__('View'), ['action' => 'view', $carro->id], ['class'=>'btn btn-info btn-xs']) ?>
                   <?= $this->Html->link(__('Edit'), ['action' => 'edit', $carro->id], ['class'=>'btn btn-warning btn-xs']) ?>

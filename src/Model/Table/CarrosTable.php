@@ -35,7 +35,7 @@ class CarrosTable extends Table
         parent::initialize($config);
 
         $this->setTable('carros');
-        $this->setDisplayField('nome_carro');
+        $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
@@ -59,10 +59,33 @@ class CarrosTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('nome_carro')
-            ->maxLength('nome_carro', 220)
-            ->requirePresence('nome_carro', 'create')
-            ->notEmpty('nome_carro');
+            ->scalar('nome')
+            ->maxLength('nome', 220)
+            ->requirePresence('nome', 'create')
+            ->notEmpty('nome');
+
+        $validator
+            ->scalar('transmissao')
+            ->maxLength('transmissao', 120)
+            ->requirePresence('transmissao', 'create')
+            ->notEmpty('transmissao');
+
+        $validator
+            ->scalar('cor')
+            ->maxLength('cor', 120)
+            ->requirePresence('cor', 'create')
+            ->notEmpty('cor');
+
+        $validator
+            ->scalar('combustivel')
+            ->maxLength('combustivel', 120)
+            ->requirePresence('combustivel', 'create')
+            ->notEmpty('combustivel');
+
+        $validator
+            ->integer('qtd_portas')
+            ->requirePresence('qtd_portas', 'create')
+            ->notEmpty('qtd_portas');
 
         return $validator;
     }

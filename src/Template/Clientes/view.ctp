@@ -21,21 +21,37 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <dl class="dl-horizontal">
-                                                                                                                <dt><?= __('Nome Cliente') ?></dt>
+                                                                                                                <dt><?= __('Nome') ?></dt>
                                         <dd>
-                                            <?= h($cliente->nome_cliente) ?>
+                                            <?= h($cliente->nome) ?>
                                         </dd>
                                                                                                                                                     <dt><?= __('Carro') ?></dt>
                                 <dd>
-                                    <?= $cliente->has('carro') ? $cliente->carro->nome_carro : '' ?>
+                                    <?= $cliente->has('carro') ? $cliente->carro->id : '' ?>
                                 </dd>
-                                                                                                                        <dt><?= __('CPF Cliente') ?></dt>
+                                                                                                                        <dt><?= __('CPF') ?></dt>
                                         <dd>
-                                            <?= h($cliente->CPF_cliente) ?>
+                                            <?= h($cliente->CPF) ?>
                                         </dd>
-                                                                                                                                                            <dt><?= __('Telefone Cliente') ?></dt>
+                                                                                                                                                            <dt><?= __('Contato') ?></dt>
                                         <dd>
-                                            <?= h($cliente->telefone_cliente) ?>
+                                            <?= h($cliente->contato) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Cep') ?></dt>
+                                        <dd>
+                                            <?= h($cliente->cep) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Rua') ?></dt>
+                                        <dd>
+                                            <?= h($cliente->rua) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Numero') ?></dt>
+                                        <dd>
+                                            <?= h($cliente->numero) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Complemento') ?></dt>
+                                        <dd>
+                                            <?= h($cliente->complemento) ?>
                                         </dd>
                                                                                                                                     
                                             

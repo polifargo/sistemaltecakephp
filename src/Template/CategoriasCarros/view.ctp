@@ -21,9 +21,9 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <dl class="dl-horizontal">
-                                                                                                                <dt><?= __('Nome Categoria') ?></dt>
+                                                                                                                <dt><?= __('Nome') ?></dt>
                                         <dd>
-                                            <?= h($categoriasCarro->nome_categoria) ?>
+                                            <?= h($categoriasCarro->nome) ?>
                                         </dd>
                                                                                                                                     
                                             
@@ -62,12 +62,32 @@
                                         
                                                                     
                                     <th>
-                                    Nome Carro
+                                    Nome
                                     </th>
                                         
                                                                     
                                     <th>
                                     Categorias Carro Id
+                                    </th>
+                                        
+                                                                    
+                                    <th>
+                                    Transmissao
+                                    </th>
+                                        
+                                                                    
+                                    <th>
+                                    Cor
+                                    </th>
+                                        
+                                                                    
+                                    <th>
+                                    Combustivel
+                                    </th>
+                                        
+                                                                    
+                                    <th>
+                                    Qtd Portas
                                     </th>
                                         
                                                                                                                                             
@@ -84,11 +104,27 @@
                                     </td>
                                                                         
                                     <td>
-                                    <?= h($carros->nome_carro) ?>
+                                    <?= h($carros->nome) ?>
                                     </td>
                                                                         
                                     <td>
                                     <?= h($carros->categorias_carro_id) ?>
+                                    </td>
+                                                                        
+                                    <td>
+                                    <?= h($carros->transmissao) ?>
+                                    </td>
+                                                                        
+                                    <td>
+                                    <?= h($carros->cor) ?>
+                                    </td>
+                                                                        
+                                    <td>
+                                    <?= h($carros->combustivel) ?>
+                                    </td>
+                                                                        
+                                    <td>
+                                    <?= h($carros->qtd_portas) ?>
                                     </td>
                                                                                                             
                                                                         <td class="actions">

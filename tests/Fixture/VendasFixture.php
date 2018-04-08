@@ -45,9 +45,9 @@ class VendasFixture extends TestFixture
             'clientes_id' => 1,
             'valor_total' => 1,
             'valor_pago' => 1,
-            'data_vencimento' => '2018-04-07',
-            'created' => '2018-04-07 04:56:12',
-            'modified' => '2018-04-07 04:56:12'
+            'data_vencimento' => '2018-04-08',
+            'created' => '2018-04-08 18:46:55',
+            'modified' => '2018-04-08 18:46:55'
         ],
     ];
 }

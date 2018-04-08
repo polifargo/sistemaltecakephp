@@ -21,17 +21,33 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <dl class="dl-horizontal">
-                                                                                                                <dt><?= __('Nome Carro') ?></dt>
+                                                                                                                <dt><?= __('Nome') ?></dt>
                                         <dd>
-                                            <?= h($carro->nome_carro) ?>
+                                            <?= h($carro->nome) ?>
                                         </dd>
                                                                                                                                                     <dt><?= __('Categorias Carro') ?></dt>
                                 <dd>
-                                    <?= $carro->has('categorias_carro') ? $carro->categorias_carro->nome_categoria : '' ?>
+                                    <?= $carro->has('categorias_carro') ? $carro->categorias_carro->id : '' ?>
+                                </dd>
+                                                                                                                        <dt><?= __('Transmissao') ?></dt>
+                                        <dd>
+                                            <?= h($carro->transmissao) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Cor') ?></dt>
+                                        <dd>
+                                            <?= h($carro->cor) ?>
+                                        </dd>
+                                                                                                                                                            <dt><?= __('Combustivel') ?></dt>
+                                        <dd>
+                                            <?= h($carro->combustivel) ?>
+                                        </dd>
+                                                                                                                                    
+                                            
+                                                                                                                                                            <dt><?= __('Qtd Portas') ?></dt>
+                                <dd>
+                                    <?= $this->Number->format($carro->qtd_portas) ?>
                                 </dd>
                                                                                                 
-                                            
-                                                                                                                                            
                                                                                                                                                                                                 
                                             
                                     </dl>

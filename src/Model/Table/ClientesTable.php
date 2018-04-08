@@ -35,7 +35,7 @@ class ClientesTable extends Table
         parent::initialize($config);
 
         $this->setTable('clientes');
-        $this->setDisplayField('nome_cliente');
+        $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
@@ -59,22 +59,46 @@ class ClientesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('nome_cliente')
-            ->maxLength('nome_cliente', 220)
-            ->requirePresence('nome_cliente', 'create')
-            ->notEmpty('nome_cliente');
+            ->scalar('nome')
+            ->maxLength('nome', 220)
+            ->requirePresence('nome', 'create')
+            ->notEmpty('nome');
 
         $validator
-            ->scalar('CPF_cliente')
-            ->maxLength('CPF_cliente', 14)
-            ->requirePresence('CPF_cliente', 'create')
-            ->notEmpty('CPF_cliente');
+            ->scalar('CPF')
+            ->maxLength('CPF', 14)
+            ->requirePresence('CPF', 'create')
+            ->notEmpty('CPF');
 
         $validator
-            ->scalar('telefone_cliente')
-            ->maxLength('telefone_cliente', 16)
-            ->requirePresence('telefone_cliente', 'create')
-            ->notEmpty('telefone_cliente');
+            ->scalar('contato')
+            ->maxLength('contato', 16)
+            ->requirePresence('contato', 'create')
+            ->notEmpty('contato');
+
+        $validator
+            ->scalar('cep')
+            ->maxLength('cep', 9)
+            ->requirePresence('cep', 'create')
+            ->notEmpty('cep');
+
+        $validator
+            ->scalar('rua')
+            ->maxLength('rua', 255)
+            ->requirePresence('rua', 'create')
+            ->notEmpty('rua');
+
+        $validator
+            ->scalar('numero')
+            ->maxLength('numero', 5)
+            ->requirePresence('numero', 'create')
+            ->notEmpty('numero');
+
+        $validator
+            ->scalar('complemento')
+            ->maxLength('complemento', 255)
+            ->requirePresence('complemento', 'create')
+            ->notEmpty('complemento');
 
         return $validator;
     }

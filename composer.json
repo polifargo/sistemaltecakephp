@@ -6,8 +6,9 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6",
+        "cakephp/authentication": "1.0.0-rc2",
         "cakephp/cakephp": "3.5.*",
-        "cakephp/migrations": "^1.0",
+        "cakephp/migrations": "@stable",
         "cakephp/plugin-installer": "^1.0",
         "josegonzalez/dotenv": "2.*",
         "maiconpinto/cakephp-adminlte-theme": "^1.0",

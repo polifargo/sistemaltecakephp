@@ -7,8 +7,12 @@ use Cake\ORM\Entity;
  * Carro Entity
  *
  * @property int $id
- * @property string $nome_carro
+ * @property string $nome
  * @property int $categorias_carro_id
+ * @property string $transmissao
+ * @property string $cor
+ * @property string $combustivel
+ * @property int $qtd_portas
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
@@ -27,8 +31,12 @@ class Carro extends Entity
      * @var array
      */
     protected $_accessible = [
-        'nome_carro' => true,
+        'nome' => true,
         'categorias_carro_id' => true,
+        'transmissao' => true,
+        'cor' => true,
+        'combustivel' => true,
+        'qtd_portas' => true,
         'created' => true,
         'modified' => true,
         'categorias_carro' => true

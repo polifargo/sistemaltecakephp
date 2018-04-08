@@ -35,7 +35,7 @@ class CategoriasCarrosTable extends Table
         parent::initialize($config);
 
         $this->setTable('categorias_carros');
-        $this->setDisplayField('nome_categoria');
+        $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
@@ -58,10 +58,10 @@ class CategoriasCarrosTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('nome_categoria')
-            ->maxLength('nome_categoria', 220)
-            ->requirePresence('nome_categoria', 'create')
-            ->notEmpty('nome_categoria');
+            ->scalar('nome')
+            ->maxLength('nome', 220)
+            ->requirePresence('nome', 'create')
+            ->notEmpty('nome');
 
         return $validator;
     }

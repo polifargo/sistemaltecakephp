@@ -7,7 +7,7 @@ use Cake\ORM\Entity;
  * CategoriasCarro Entity
  *
  * @property int $id
- * @property string $nome_categoria
+ * @property string $nome
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
@@ -26,7 +26,7 @@ class CategoriasCarro extends Entity
      * @var array
      */
     protected $_accessible = [
-        'nome_categoria' => true,
+        'nome' => true,
         'created' => true,
         'modified' => true,
         'carros' => true

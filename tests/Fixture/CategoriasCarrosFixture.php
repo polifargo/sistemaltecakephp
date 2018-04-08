@@ -18,7 +18,7 @@ class CategoriasCarrosFixture extends TestFixture
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'nome_categoria' => ['type' => 'string', 'length' => 220, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'nome' => ['type' => 'string', 'length' => 220, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
@@ -39,9 +39,9 @@ class CategoriasCarrosFixture extends TestFixture
     public $records = [
         [
             'id' => 1,
-            'nome_categoria' => 'Lorem ipsum dolor sit amet',
-            'created' => '2018-04-07 04:56:27',
-            'modified' => '2018-04-07 04:56:27'
+            'nome' => 'Lorem ipsum dolor sit amet',
+            'created' => '2018-04-08 22:21:48',
+            'modified' => '2018-04-08 22:21:48'
         ],
     ];
 }

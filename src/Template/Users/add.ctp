@@ -1,6 +1,6 @@
 <section class="content-header">
   <h1>
-    Cliente
+    User
     <small><?= __('Add') ?></small>
   </h1>
   <ol class="breadcrumb">
@@ -22,17 +22,11 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <?= $this->Form->create($cliente, array('role' => 'form')) ?>
+        <?= $this->Form->create($user, array('role' => 'form')) ?>
           <div class="box-body">
           <?php
-            echo $this->Form->input('nome');
-            echo $this->Form->input('carros_id', ['options' => $carros]);
-            echo $this->Form->input('CPF');
-            echo $this->Form->input('contato');
-            echo $this->Form->input('cep');
-            echo $this->Form->input('rua');
-            echo $this->Form->input('numero');
-            echo $this->Form->input('complemento');
+            echo $this->Form->input('username');
+            echo $this->Form->input('password');
           ?>
           </div>
           <!-- /.box-body -->

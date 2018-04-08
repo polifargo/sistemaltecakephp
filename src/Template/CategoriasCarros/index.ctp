@@ -30,7 +30,7 @@
             <thead>
               <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('nome_categoria') ?></th>
+                <th><?= $this->Paginator->sort('nome') ?></th>
                 <th><?= __('Actions') ?></th>
               </tr>
             </thead>
@@ -38,7 +38,7 @@
             <?php foreach ($categoriasCarros as $categoriasCarro): ?>
               <tr>
                 <td><?= $this->Number->format($categoriasCarro->id) ?></td>
-                <td><?= h($categoriasCarro->nome_categoria) ?></td>
+                <td><?= h($categoriasCarro->nome) ?></td>
                 <td class="actions" style="white-space:nowrap">
                   <?= $this->Html->link(__('View'), ['action' => 'view', $categoriasCarro->id], ['class'=>'btn btn-info btn-xs']) ?>
                   <?= $this->Html->link(__('Edit'), ['action' => 'edit', $categoriasCarro->id], ['class'=>'btn btn-warning btn-xs']) ?>

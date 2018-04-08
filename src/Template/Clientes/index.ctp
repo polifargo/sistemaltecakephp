@@ -30,10 +30,12 @@
             <thead>
               <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
-                <th><?= $this->Paginator->sort('nome_cliente') ?></th>
+                <th><?= $this->Paginator->sort('nome') ?></th>
                 <th><?= $this->Paginator->sort('carros_id') ?></th>
-                <th><?= $this->Paginator->sort('CPF_cliente') ?></th>
-                <th><?= $this->Paginator->sort('telefone_cliente') ?></th>
+                <th><?= $this->Paginator->sort('CPF') ?></th>
+                <th><?= $this->Paginator->sort('contato') ?></th>
+                <th><?= $this->Paginator->sort('cep') ?></th>
+                <th><?= $this->Paginator->sort('rua') ?></th>
                 <th><?= __('Actions') ?></th>
               </tr>
             </thead>
@@ -41,10 +43,12 @@
             <?php foreach ($clientes as $cliente): ?>
               <tr>
                 <td><?= $this->Number->format($cliente->id) ?></td>
-                <td><?= h($cliente->nome_cliente) ?></td>
-                <td><?= $cliente->has('carro') ? $this->Html->link($cliente->carro->nome_carro, ['controller' => 'Carros', 'action' => 'view', $cliente->carro->id]) : '' ?></td>
-                <td><?= h($cliente->CPF_cliente) ?></td>
-                <td><?= h($cliente->telefone_cliente) ?></td>
+                <td><?= h($cliente->nome) ?></td>
+                <td><?= $cliente->has('carro') ? $this->Html->link($cliente->carro->id, ['controller' => 'Carros', 'action' => 'view', $cliente->carro->id]) : '' ?></td>
+                <td><?= h($cliente->CPF) ?></td>
+                <td><?= h($cliente->contato) ?></td>
+                <td><?= h($cliente->cep) ?></td>
+                <td><?= h($cliente->rua) ?></td>
                 <td class="actions" style="white-space:nowrap">
                   <?= $this->Html->link(__('View'), ['action' => 'view', $cliente->id], ['class'=>'btn btn-info btn-xs']) ?>
                   <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cliente->id], ['class'=>'btn btn-warning btn-xs']) ?>

@@ -231,3 +231,5 @@ Configure::write('Theme', [
   'folder' => ROOT,
   'skin' => 'blue'
 ]);
+
+Plugin::load('Migrations');

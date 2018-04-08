@@ -25,7 +25,7 @@
         <?= $this->Form->create($categoriasCarro, array('role' => 'form')) ?>
           <div class="box-body">
           <?php
-            echo $this->Form->input('nome_categoria');
+            echo $this->Form->input('nome');
           ?>
           </div>
           <!-- /.box-body -->
