@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07-Abr-2018 às 09:11
+-- Generation Time: 09-Abr-2018 às 04:16
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -30,8 +30,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `carros` (
   `id` int(11) NOT NULL,
-  `nome_carro` varchar(220) NOT NULL,
+  `nome` varchar(220) NOT NULL,
   `categorias_carro_id` int(11) NOT NULL,
+  `transmissao` varchar(120) NOT NULL,
+  `cor` varchar(120) NOT NULL,
+  `combustivel` varchar(120) NOT NULL,
+  `qtd_portas` int(11) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -40,9 +44,8 @@ CREATE TABLE `carros` (
 -- Extraindo dados da tabela `carros`
 --
 
-INSERT INTO `carros` (`id`, `nome_carro`, `categorias_carro_id`, `created`, `modified`) VALUES
-(1, 'Renault Duster', 1, '2018-04-06 23:28:07', '2018-04-06 23:28:07'),
-(2, 'Monza', 2, '2018-04-07 05:06:53', '2018-04-07 05:06:53');
+INSERT INTO `carros` (`id`, `nome`, `categorias_carro_id`, `transmissao`, `cor`, `combustivel`, `qtd_portas`, `created`, `modified`) VALUES
+(9, 'dsdasdas', 4, 'adsdasads', 'dasdas', 'adsads', 2, '2018-04-09 02:10:16', '2018-04-09 02:10:16');
 
 -- --------------------------------------------------------
 
@@ -52,7 +55,7 @@ INSERT INTO `carros` (`id`, `nome_carro`, `categorias_carro_id`, `created`, `mod
 
 CREATE TABLE `categorias_carros` (
   `id` int(11) NOT NULL,
-  `nome_categoria` varchar(220) NOT NULL,
+  `nome` varchar(220) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -61,9 +64,8 @@ CREATE TABLE `categorias_carros` (
 -- Extraindo dados da tabela `categorias_carros`
 --
 
-INSERT INTO `categorias_carros` (`id`, `nome_categoria`, `created`, `modified`) VALUES
-(1, 'SUV', '2018-04-06 23:27:48', '2018-04-06 23:27:48'),
-(2, 'Sedan', '2018-04-07 05:06:08', '2018-04-07 05:06:08');
+INSERT INTO `categorias_carros` (`id`, `nome`, `created`, `modified`) VALUES
+(4, 'dsaadsads', '2018-04-09 00:00:34', '2018-04-09 00:00:34');
 
 -- --------------------------------------------------------
 
@@ -73,10 +75,14 @@ INSERT INTO `categorias_carros` (`id`, `nome_categoria`, `created`, `modified`) 
 
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL,
-  `nome_cliente` varchar(220) NOT NULL,
+  `nome` varchar(220) NOT NULL,
   `carros_id` int(11) NOT NULL,
-  `CPF_cliente` varchar(14) NOT NULL,
-  `telefone_cliente` varchar(16) NOT NULL,
+  `CPF` varchar(14) NOT NULL,
+  `contato` varchar(16) NOT NULL,
+  `cep` varchar(9) NOT NULL,
+  `rua` varchar(255) NOT NULL,
+  `numero` varchar(5) NOT NULL,
+  `complemento` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -85,33 +91,29 @@ CREATE TABLE `clientes` (
 -- Extraindo dados da tabela `clientes`
 --
 
-INSERT INTO `clientes` (`id`, `nome_cliente`, `carros_id`, `CPF_cliente`, `telefone_cliente`, `created`, `modified`) VALUES
-(3, 'Matheus Santo', 1, '213.123.213-21', '(32) 1312-1321', '2018-04-07 02:15:53', '2018-04-07 02:15:53');
+INSERT INTO `clientes` (`id`, `nome`, `carros_id`, `CPF`, `contato`, `cep`, `rua`, `numero`, `complemento`, `created`, `modified`) VALUES
+(6, 'asdsadasdasd', 8, '321.132.312-31', 'saadsasdasd', '31232-131', 'adsdsa', '123', 'asdasdasd', '2018-04-09 00:01:05', '2018-04-09 01:38:30');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Estrutura da tabela `users`
 --
 
-CREATE TABLE `usuarios` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `usuario` varchar(24) NOT NULL,
-  `password` varchar(244) NOT NULL,
-  `role` varchar(22) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `password`, `role`, `created`, `modified`) VALUES
-(1, 'admin', 'admin', '', '2018-04-07 06:04:55', '2018-04-07 06:50:58'),
-(2, 'admin2', 'root', '', '2018-04-07 06:05:10', '2018-04-07 06:05:10'),
-(3, 'matheus', 'teste', '', '2018-04-07 06:40:45', '2018-04-07 06:40:45'),
-(4, 'admin', 'admin', '', '2018-04-07 06:54:24', '2018-04-07 06:54:24');
+INSERT INTO `users` (`id`, `username`, `password`, `created`, `modified`) VALUES
+(13, 'adm', '$2y$10$CUdJboKnJ49yT42A.SnXmOwS0CvJ48cKs/8/4cSdGsLUckOVbWKGu', '2018-04-08 20:37:54', '2018-04-08 20:37:54');
 
 -- --------------------------------------------------------
 
@@ -128,13 +130,6 @@ CREATE TABLE `vendas` (
   `created` datetime NOT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `vendas`
---
-
-INSERT INTO `vendas` (`id`, `clientes_id`, `valor_total`, `valor_pago`, `data_vencimento`, `created`, `modified`) VALUES
-(1, 2, 21321, 2131230, '2018-03-18', '2018-04-07 01:18:26', '2018-04-07 01:18:26');
 
 --
 -- Indexes for dumped tables
@@ -159,9 +154,9 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuarios`
+-- Indexes for table `users`
 --
-ALTER TABLE `usuarios`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -178,25 +173,25 @@ ALTER TABLE `vendas`
 -- AUTO_INCREMENT for table `carros`
 --
 ALTER TABLE `carros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `categorias_carros`
 --
 ALTER TABLE `categorias_carros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `vendas`
