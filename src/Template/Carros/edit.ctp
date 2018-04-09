@@ -1,11 +1,11 @@
 <section class="content-header">
   <h1>
     Carro
-    <small><?= __('Edit') ?></small>
+    <small><?= __('Editando') ?></small>
   </h1>
   <ol class="breadcrumb">
     <li>
-      <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Back'), ['action' => 'index'], ['escape' => false]) ?>
+      <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Voltar'), ['action' => 'index'], ['escape' => false]) ?>
     </li>
   </ol>
 </section>
@@ -18,7 +18,7 @@
       <!-- general form elements -->
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title"><?= __('Form') ?></h3>
+          <h3 class="box-title"><?= __('Formulário') ?></h3>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
@@ -35,22 +35,28 @@
           )
         );
         echo $this->Form->input('cor');
-        echo $this->Form->input('combustivel');
-        echo $this->Form->input('qtd_portas',
+        echo $this->Form->input('combustivel',
         array(
           'type'=>'select',
-          'options' => array('2'=>'Duas','4'=>'Quatro'),
-          'label' =>'Quantidade de Portas'
+          'options' => array('Diesel'=>'Diesel','Etanol'=>'Etanol', 'Gasolina'=>'Gasolina'),
+          'label' =>'Tipo do Combustível'
         )
       );
-      ?>
-    </div>
-    <!-- /.box-body -->
-    <div class="box-footer">
-      <?= $this->Form->button(__('Save')) ?>
-    </div>
-    <?= $this->Form->end() ?>
+      echo $this->Form->input('qtd_portas',
+      array(
+        'type'=>'select',
+        'options' => array('2'=>'Duas','4'=>'Quatro'),
+        'label' =>'Quantidade de Portas'
+      )
+    );
+    ?>
   </div>
+  <!-- /.box-body -->
+  <div class="box-footer">
+    <?= $this->Form->button(__('Salvar')) ?>
+  </div>
+  <?= $this->Form->end() ?>
+</div>
 </div>
 </div>
 </section>
