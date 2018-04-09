@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Search\Manager;
 
 /**
 * Application Controller
@@ -56,6 +57,7 @@ class AppController extends Controller
     // continues to work. Also enable the read only actions.
     $this->Auth->allow(['login']);
     $this->Auth->allow(['logout']);
+
   }
 
   public function beforeRender(Event $event)

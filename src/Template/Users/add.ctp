@@ -1,11 +1,11 @@
 <section class="content-header">
   <h1>
     User
-    <small><?= __('Adicionando') ?></small>
+    <small><?= __('Add') ?></small>
   </h1>
   <ol class="breadcrumb">
     <li>
-    <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Voltar'), ['action' => 'index'], ['escape' => false]) ?>
+    <?= $this->Html->link('<i class="fa fa-dashboard"></i> '.__('Back'), ['action' => 'index'], ['escape' => false]) ?>
     </li>
   </ol>
 </section>
@@ -18,7 +18,7 @@
       <!-- general form elements -->
       <div class="box box-primary">
         <div class="box-header with-border">
-          <h3 class="box-title"><?= __('Formulário') ?></h3>
+          <h3 class="box-title"><?= __('Form') ?></h3>
         </div>
         <!-- /.box-header -->
         <!-- form start -->
@@ -31,7 +31,7 @@
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <?= $this->Form->button(__('Salvar')) ?>
+            <?= $this->Form->button(__('Save')) ?>
           </div>
         <?= $this->Form->end() ?>
       </div>

@@ -4,7 +4,7 @@
   </h1>
   <ol class="breadcrumb">
     <li>
-      <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Voltar'), ['action' => 'index'], ['escape' => false])?>
+      <?= $this->Html->link('<i class="fa fa-dashboard"></i> ' . __('Back'), ['action' => 'index'], ['escape' => false])?>
     </li>
   </ol>
 </section>
@@ -16,7 +16,7 @@
       <div class="box box-solid">
         <div class="box-header with-border">
           <i class="fa fa-info"></i>
-          <h3 class="box-title"><?php echo __('Informações'); ?></h3>
+          <h3 class="box-title"><?php echo __('Information'); ?></h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -40,7 +40,7 @@
       <div class="box">
         <div class="box-header">
           <i class="fa fa-share-alt"></i>
-          <h3 class="box-title"><?= __('Carros {0}', ['Relacionados']) ?></h3>
+          <h3 class="box-title"><?= __('Related {0}', ['Carros']) ?></h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body table-responsive no-padding">

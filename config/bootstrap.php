@@ -233,3 +233,5 @@ Configure::write('Theme', [
 ]);
 
 Plugin::load('Migrations');
+
+Plugin::load('Search');
