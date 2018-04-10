@@ -15,6 +15,7 @@ use Cake\ORM\Entity;
  * @property string $rua
  * @property string $numero
  * @property string $complemento
+ * @property float $valor_total
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
@@ -41,6 +42,7 @@ class Cliente extends Entity
         'rua' => true,
         'numero' => true,
         'complemento' => true,
+        'valor_total' => true,
         'created' => true,
         'modified' => true,
         'carro' => true

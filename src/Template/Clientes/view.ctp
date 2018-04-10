@@ -53,6 +53,10 @@
             <dd>
               <?= h($cliente->complemento) ?>
             </dd>
+            <dt><?= __('Valor Total') ?></dt>
+            <dd>
+              <?= h($cliente->valor_total) ?>
+            </dd>
           </dl>
         </div>
         <!-- /.box-body -->

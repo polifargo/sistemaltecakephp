@@ -33,6 +33,7 @@
                 <th><?= $this->Paginator->sort('contato') ?></th>
                 <th><?= $this->Paginator->sort('cep') ?></th>
                 <th><?= $this->Paginator->sort('rua') ?></th>
+                <th><?= $this->Paginator->sort('valor_total') ?></th>
                 <th><?= __('Actions') ?></th>
               </tr>
             </thead>
@@ -46,6 +47,7 @@
                   <td><?= h($cliente->contato) ?></td>
                   <td><?= h($cliente->cep) ?></td>
                   <td><?= h($cliente->rua) ?></td>
+                  <td><?= h($cliente->valor_total) ?></td>
                   <td class="actions" style="white-space:nowrap">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $cliente->id], ['class'=>'btn btn-info btn-xs']) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $cliente->id], ['class'=>'btn btn-warning btn-xs']) ?>

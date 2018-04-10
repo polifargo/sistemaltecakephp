@@ -26,6 +26,7 @@ class ClientesFixture extends TestFixture
         'rua' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'numero' => ['type' => 'string', 'length' => 5, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'complemento' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'valor_total' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => ''],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
@@ -54,8 +55,9 @@ class ClientesFixture extends TestFixture
             'rua' => 'Lorem ipsum dolor sit amet',
             'numero' => 'Lor',
             'complemento' => 'Lorem ipsum dolor sit amet',
-            'created' => '2018-04-08 22:21:56',
-            'modified' => '2018-04-08 22:21:56'
+            'valor_total' => 1,
+            'created' => '2018-04-10 02:27:35',
+            'modified' => '2018-04-10 02:27:35'
         ],
     ];
 }

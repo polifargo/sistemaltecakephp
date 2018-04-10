@@ -35,8 +35,9 @@
           echo $this->Form->input('contato', ['id' => 'contato']);
           echo $this->Form->input('cep', ['id' => 'cep']);
           echo $this->Form->input('rua');
-          echo $this->Form->input('numero');
+          echo $this->Form->input('numero', ['id' => 'numero']);
           echo $this->Form->input('complemento');
+          echo $this->Form->input('valor_total', ['id' => 'valor_total']);
           ?>
         </div>
         <!-- /.box-body -->
@@ -68,5 +69,11 @@ window.onload = function(){
   });
 
   $("#cep").mask("99999-999");
+
+  $("#numero").keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+      return false;
+    }
+  });
 }
 </script>
